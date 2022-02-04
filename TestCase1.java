@@ -3,12 +3,15 @@ package selenium;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class TestCase1 {
 	
 	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver", "./src/main/resources/drivers/chromedriver.exe");
+		/*System.setProperty("webdriver.chrome.driver", "./src/main/resources/drivers/chromedriver.exe");*/
+		 WebDriverManager.chromedriver().setup();
 		//Create instance for Chrome driver
-		 ChromeDriver driver = new ChromeDriver();
+		 ChromeDriver driver = new ChromeDriver();	
 		//Launch URL
 		driver.get("http://leaftaps.com/opentaps/control/main");
 		//Maximize window
